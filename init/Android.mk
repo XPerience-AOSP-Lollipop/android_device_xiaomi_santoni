@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017 The XPerience Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,8 +20,8 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_C_INCLUDES := system/core/init
-LOCAL_MODULE := libinit_mido
+LOCAL_MODULE := libinit_santoni
 LOCAL_MODULE_TAGS := optional
-LOCAL_SRC_FILES := init_mido.cpp
+LOCAL_SRC_FILES := init_santoni.cpp
 
 include $(BUILD_STATIC_LIBRARY)
