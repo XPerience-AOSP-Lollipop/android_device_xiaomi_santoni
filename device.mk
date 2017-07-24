@@ -230,9 +230,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.qcom \
     init.qcom.rc \
+    init.qcom.factory.rc \
     init.qcom.sh \
+    init.qcom.sensors.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
+    init.qcom.usb.configfs.rc \
     init.target.rc \
     ueventd.qcom.rc
 
