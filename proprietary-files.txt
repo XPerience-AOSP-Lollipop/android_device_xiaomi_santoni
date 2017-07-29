@@ -29,6 +29,8 @@ etc/drc/drc_cfg_AZ.txt
 etc/surround_sound_3mic/surround_sound_rec_5.1.cfg
 etc/surround_sound_3mic/surround_sound_rec_AZ.cfg
 lib/soundfx/libdirac.so
+lib/hw/audio.primary.msm8937.so
+lib64/hw/audio.primary.msm8937.so
 vendor/etc/diracmobile.config
 vendor/lib/libacdb-fts.so
 vendor/lib/libacdbloader.so
@@ -67,13 +69,41 @@ etc/acdbdata/MTP/MTP_Handset_cal.acdb
 etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
 etc/acdbdata/MTP/MTP_Headset_cal.acdb
 etc/acdbdata/MTP/MTP_Speaker_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Bluetooth_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_General_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Global_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Handset_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Hdmi_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Headset_cal.acdb
-etc/acdbdata/MTP/msm8953-tasha-snd-card/MTP_WCD9335_Speaker_cal.acdb
+etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Bluetooth_cal.acdb
+etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_General_cal.acdb
+etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Global_cal.acdb
+etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Handset_cal.acdb
+etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Hdmi_cal.acdb
+etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Headset_cal.acdb
+etc/acdbdata/MTP/msm8952-tasha-snd-card/MTP_WCD9335_Speaker_cal.acdb
+etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_Bluetooth_cal.acdb
+etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_General_cal.acdb
+etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_Global_cal.acdb
+etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_Handset_cal.acdb
+etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_Hdmi_cal.acdb
+etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_Headset_cal.acdb
+etc/acdbdata/QRD/msm8917-tmo-snd-card/QRD_Speaker_cal.acdb
+etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Bluetooth_cal.acdb
+etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_General_cal.acdb
+etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Global_cal.acdb
+etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Handset_cal.acdb
+etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Hdmi_cal.acdb
+etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Headset_cal.acdb
+etc/acdbdata/QRD/msm8952-sku2-snd-card/QRD_SKU2_Speaker_cal.acdb
+etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Bluetooth_cal.acdb
+etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_General_cal.acdb
+etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Global_cal.acdb
+etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Handset_cal.acdb
+etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Hdmi_cal.acdb
+etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Headset_cal.acdb
+etc/acdbdata/QRD/msm8940-sku6-snd-card/QRD_SKU6_Speaker_cal.acdb
+etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD_SKU7_Bluetooth_cal.acdb
+etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD_SKU7_General_cal.acdb
+etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD_SKU7_Global_cal.acdb
+etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD_SKU7_Handset_cal.acdb
+etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD_SKU7_Hdmi_cal.acdb
+etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD_SKU7_Headset_cal.acdb
+etc/acdbdata/QRD/msm8920-sku7-snd-card/QRD_SKU7_Speaker_cal.acdb
 etc/acdbdata/QRD/QRD_Bluetooth_cal.acdb
 etc/acdbdata/QRD/QRD_General_cal.acdb
 etc/acdbdata/QRD/QRD_Global_cal.acdb
@@ -144,6 +174,28 @@ vendor/lib64/libxml.so
 
 # Camera
 bin/mm-qcamera-daemon
+bin/mm-qcamera-app
+bin/cameraserver
+lib/hw/camera.msm8937.so
+lib/libmmcamera_interface.so
+lib/libmmjpeg_interface.so
+lib/libmm-omxcore.so
+lib/libmm-qcamera.so
+lib/libmorpho_memory_allocator.so
+lib/libmorpho_panorama.so
+lib/libOmxVpp.so
+lib/libqomx_core.so
+lib/libvpplibrary.so
+lib64/hw/camera.msm8937.so
+lib64/libmmcamera_interface.so
+lib64/libmmjpeg_interface.so
+lib64/libmm-omxcore.so
+lib64/libmm-qcamera.so
+lib64/libmorpho_memory_allocator.so
+lib64/libmorpho_panorama.so
+lib64/libOmxVpp.so
+lib64/libqomx_core.so
+lib64/libvpplibrary.so
 vendor/lib/libChamomilePA.so
 vendor/lib/libchromaflash.so
 vendor/lib/libflash_pmic.so
@@ -718,29 +770,57 @@ vendor/lib/libchromatix_s5k5e8_sunny_zsl_video_3a.so
 
 
 # Camera configs
-etc/camera/camera_config.xml|3ddeec17d6a58951a3fdf068b3aba9b9f370da3a
+etc/camera/camera_config.xml
 etc/camera/csidtg_camera.xml
 etc/camera/csidtg_chromatix.xml
+etc/camera/imx214_chromatix.xml
+etc/camera/imx230_chromatix.xml
+etc/camera/imx230_qc2002_chromatix.xml
+etc/camera/imx230_qc2002_with_gyro_chromatix.xml
 etc/camera/imx258_bear_chromatix.xml
 etc/camera/imx258_chromatix.xml
 etc/camera/imx258_mono_bear_chromatix.xml
 etc/camera/imx258_mono_chromatix.xml
-etc/camera/imx258_ofilm_chromatix.xml
-etc/camera/imx258_qtech_chromatix.xml
-etc/camera/imx258_sunny_chromatix.xml
+etc/camera/imx298_chromatix.xml
+etc/camera/imx298_gt24c64_chromatix.xml
+etc/camera/imx318_chromatix.xml
+etc/camera/imx362_chromatix.xml
+etc/camera/imx362_chromatix_bear.xml
+etc/camera/imx378_chromatix.xml
+etc/camera/ov2281_chromatix.xml
+etc/camera/ov2680_chromatix.xml
+etc/camera/ov4688_chromatix.xml
+etc/camera/ov5670_chromatix.xml
+etc/camera/ov5670_f5670bq_chromatix.xml
+etc/camera/ov5675_d5v15b_chromatix.xml
+etc/camera/ov5675_ofilm_chromatix.xml
+etc/camera/ov5695_chromatix.xml
+etc/camera/ov7251_chromatix.xml
+etc/camera/ov8858_chromatix.xml
+etc/camera/ov8865_chromatix.xml
+etc/camera/ov13850_chromatix.xml
+etc/camera/ov13850_q13v06k_chromatix.xml
 etc/camera/ov13855_qtech_chromatix.xml
+etc/camera/ov13855_sunny_chromatix.xml
+etc/camera/s5k2l7_8953_chromatix.xml
+etc/camera/s5k2l7_chromatix.xml
+etc/camera/s5k3l2_chromatix.xml
 etc/camera/s5k3l8_chromatix.xml
 etc/camera/s5k3l8_f3l8yam_chromatix.xml
 etc/camera/s5k3l8_mono_chromatix.xml
 etc/camera/s5k3l8_ofilm_chromatix.xml
-etc/camera/s5k3l8_qtech_chromatix.xml
-etc/camera/s5k3l8_sunny_chromatix.xml
+etc/camera/s5k3l8_ofilm_riva_chromatix.xml
+etc/camera/s5k3m2xm_chromatix.xml
+etc/camera/s5k3m2xm_chromatix_bear.xml
+etc/camera/s5k3m2xx_chromatix.xml
+etc/camera/s5k3p3sm_chromatix.xml
+etc/camera/s5k5e8_chromatix.xml
 etc/camera/s5k5e8_ofilm_chromatix.xml
-etc/camera/s5k5e8_qtech_chromatix.xml
+etc/camera/s5k5e8_ofilm_riva_chromatix.xml
+etc/camera/s5k5e8_qtech_riva_chromatix.xml
 etc/camera/s5k5e8_sunny_chromatix.xml
 
 # Camera firmware
-etc/firmware/cpp_firmware_v1_10_0.fw
 etc/firmware/cpp_firmware_v1_1_1.fw
 etc/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw
@@ -749,6 +829,8 @@ etc/firmware/cpp_firmware_v1_5_0.fw
 etc/firmware/cpp_firmware_v1_5_2.fw
 etc/firmware/cpp_firmware_v1_6_0.fw
 etc/firmware/cpp_firmware_v1_8_0.fw
+etc/firmware/cpp_firmware_v1_10_0.fw
+etc/firmware/cpp_firmware_v1_12_0.fw
 
 # Charger
 bin/hvdcp_opti
@@ -806,6 +888,10 @@ vendor/lib64/libtzdrmgenprov.so
 
 # Fingerprint
 bin/gx_fpd
+lib/hw/fingerprint.default.so
+lib64/hw/fingerprint.default.so
+lib/hw/fingerprint.msm8937.so
+lib64/hw/fingerprint.msm8937.so
 lib/hw/fingerprint.searchf.so
 lib/libcom_fingerprints_service.so
 lib64/hw/fingerprint.goodix.so
@@ -835,11 +921,19 @@ etc/permissions/com.qualcomm.location.xml
 etc/permissions/izat.xt.srv.xml
 etc/xtra_root_cert.pem
 framework/com.qualcomm.location.vzw_library.jar
+framework/com.qti.location.sdk.jar
 framework/izat.xt.srv.jar
+lib/libgps.utils.so
+lib/libloc_core.so
 lib/libloc_api_v02.so
 lib/libloc_ds_api.so
+lib/libloc_eng.so
+lib/hw/gps.default.so
 lib64/libloc_api_v02.so
 lib64/libloc_ds_api.so
+lib64/libgps.utils.so
+lib64/libloc_core.so
+lib64/libloc_eng.so
 vendor/bin/slim_daemon
 vendor/lib/hw/flp.default.so
 vendor/lib/libalarmservice_jni.so
@@ -966,7 +1060,9 @@ etc/firmware/a530v3_gpmu.fw2
 etc/firmware/a530v3_seq.fw2
 
 # Ipacm
+-bin/ipacm
 bin/ipacm-diag
+etc/IPACM_cfg.xml
 
 # Keystore
 vendor/lib/hw/keystore.msm8953.so
@@ -978,6 +1074,7 @@ vendor/lib/libadpcmdec.so
 vendor/lib/libsmwrapper.so
 
 # Media
+etc/firmware/DE.o.msm8937
 lib/libOmxVpp.so
 lib/libstagefright_soft_flacdec.so
 lib/libvpplibrary.so
@@ -1108,7 +1205,7 @@ etc/permissions/telephonyservice.xml
 framework/QtiTelephonyServicelibrary.jar
 framework/embmslibrary.jar
 -framework/qcrilhook.jar
-framework/qti-telephony-common.jar|37d692fb171d0ee3269676a9e9998d2e3bfd9488
+framework/qti-telephony-common.jar
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 vendor/bin/qti
 vendor/lib/liblqe.so
@@ -1199,3 +1296,4 @@ vendor/lib/mediadrm/libwvdrmengine.so|70419ce1f8eb6bd3aa36234f8d7e8003569efc9c
 bin/cnss-daemon
 bin/cnss_diag
 bin/wcnss_service
+-lib/modules/pronto/pronto_wlan.ko
