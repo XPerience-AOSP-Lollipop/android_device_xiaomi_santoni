@@ -120,7 +120,7 @@ PRODUCT_PACKAGES += \
     camera.msm8937 \
     libmm-qcamera \
     Snap
-	
+
 # Display
 PRODUCT_PACKAGES += \
     copybit.msm8937 \
@@ -139,7 +139,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     fingerprintd
-	
+
 # FM
 PRODUCT_PACKAGES += \
     FMRadio \
@@ -197,7 +197,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     lights.msm8937
 
-# Media 
+# Media
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_codecs_8956.xml:system/etc/media_codecs_8956.xml \
@@ -210,12 +210,21 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:system/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:system/etc/media_codecs_google_video.xml
 
- # OMX
-  PRODUCT_PACKAGES += \
-      libmm-omxcore \
-      libc2dcolorconvert \
-      libOmxAacEnc \
-      libOmxAmrEnc \
+# OMX
+PRODUCT_PACKAGES += \
+    libdivxdrmdecrypt \
+    libc2dcolorconvert \
+    libOmxAacEnc \
+    libOmxAmrEnc \
+    libOmxCore \
+    libOmxEvrcEnc \
+    libOmxQcelp13Enc \
+    libOmxSwVencHevc \
+    libOmxVidcCommon \
+    libOmxVdec \
+    libOmxVenc \
+    libextmedia_jni \
+    libstagefrighthw
 
 # Power
 PRODUCT_PACKAGES += \
@@ -279,3 +288,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/fstman.ini:system/etc/wifi/fstman.ini \
     $(LOCAL_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
+
+PRODUCT_COPY_FILES += \
+   $(LOCAL_PATH)/prebuilt/wlan.ko:system/lib/modules/wlan.ko
+
