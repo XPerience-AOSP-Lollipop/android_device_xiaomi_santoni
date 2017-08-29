@@ -26,6 +26,7 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
+#include <android-base/properties.h>
 #include <fcntl.h>
 #include <stdlib.h>
 #include <iostream>
@@ -46,6 +47,7 @@ char const *heapmaxfree;
 char const *large_cache_height;
 
 static std::string board_id;
+using android::base::GetProperty;
 
 static void import_cmdline(const std::string& key,
         const std::string& value, bool for_emulator __attribute__((unused)))
@@ -126,7 +128,10 @@ void check_device()
 
 void init_variant_properties()
 {
-    if (property_get("ro.xpe.device") != "santoni")
+	std::string device;
+
+    device = GetProperty("ro.xpe.device", "");
+    if (device != "santoni")
         return;
 
     import_kernel_cmdline(0, import_cmdline);
