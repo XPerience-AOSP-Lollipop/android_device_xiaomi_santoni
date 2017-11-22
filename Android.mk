@@ -77,6 +77,19 @@ $(ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(ADSP_SYMLINKS)
 
+CARDAPP_IMAGES := \
+    cardapp.b00 cardapp.b01 cardapp.b02 cardapp.b03 cardapp.b04 \
+    cardapp.b05 cardapp.b06 cardapp.mdt
+
+CARDAPP_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(CARDAPP_IMAGES)))
+$(CARDAPP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Cardapp firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(CARDAPP_SYMLINKS)
+
 CPPF_IMAGES := \
     cppf.b00 cppf.b01 cppf.b02 cppf.b03 cppf.b04 cppf.b05 \
     cppf.b06 cppf.mdt
