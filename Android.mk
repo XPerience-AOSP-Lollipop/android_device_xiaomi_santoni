@@ -63,6 +63,59 @@ $(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(IMS_SYMLINKS)
 
+ADSP_IMAGES := \
+    adsp.b00 adsp.b01 adsp.b02 adsp.b03 adsp.b04 adsp.b05 \
+    adsp.b06 adsp.b07 adsp.b08 adsp.b09 adsp.b10 adsp.b11 \
+	adsp.b12 adsp.b13 adsp.b14 adsp.mdt
+
+ADSP_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(ADSP_IMAGES)))
+$(ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "adsp firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(ADSP_SYMLINKS)
+
+CPPF_IMAGES := \
+    cppf.b00 cppf.b01 cppf.b02 cppf.b03 cppf.b04 cppf.b05 \
+    cppf.b06 cppf.mdt
+
+CPPF_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(CPPF_IMAGES)))
+$(CPPF_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Cppf firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(CPPF_SYMLINKS)
+
+FPC_IMAGES := \
+    fpcta.b00 fpcta.b01 fpcta.b02 fpcta.b03 \
+    fpcta.b04 fpcta.b05 fpcta.b06 fpcta.mdt
+
+FPC_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FPC_IMAGES)))
+$(FPC_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Fpc firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(FPC_SYMLINKS)
+
+FINGERPR_IMAGES := \
+    fingerpr.b00 fingerpr.b01 fingerpr.b02 fingerpr.b03 \
+    fingerpr.b04 fingerpr.b05 fingerpr.b06 fingerpr.mdt
+
+FINGERPR_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FINGERPR_IMAGES)))
+$(FINGERPR_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Fingerpr firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(FINGERPR_SYMLINKS)
+
 GOODIX_IMAGES := \
     goodixfp.b00 goodixfp.b01 goodixfp.b02 goodixfp.b03 \
     goodixfp.b04 goodixfp.b05 goodixfp.b06 goodixfp.mdt
@@ -76,18 +129,70 @@ $(GOODIX_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(GOODIX_SYMLINKS)
 
-FPC_IMAGES := \
-    fpctzapp.b00 fpctzapp.b01 fpctzapp.b02 fpctzapp.b03 \
-    fpctzapp.b04 fpctzapp.b05 fpctzapp.b06 fpctzapp.mdt
+MODEM_IMAGES := \
+    modem.b00 modem.b01 modem.b02 modem.b04 modem.b05 modem.b06 \
+    modem.b07 modem.b08 modem.b09 modem.b10 modem.b11 modem.b12 \
+	modem.b13 modem.b16 modem.b17 modem.b18 modem.b19 modem.b20 \
+	modem.mdt modem_pr
 
-FPC_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(FPC_IMAGES)))
-$(FPC_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Fpc firmware link: $@"
+MODEM_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(MODEM_IMAGES)))
+$(MODEM_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Modem firmware link: $@"
 	@mkdir -p $(dir $@)
 	@rm -rf $@
 	$(hide) ln -sf /firmware/image/$(notdir $@) $@
 
-ALL_DEFAULT_INSTALLED_MODULES += $(FPC_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += $(MODEM_SYMLINKS)
+
+QDSP6M_IMAGES := \
+    qdsp6m.qdb
+
+QDSP6M_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(QDSP6M_IMAGES)))
+$(QDSP6M_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Qdsp6m firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(QDSP6M_SYMLINKS)
+
+VENUS_IMAGES := \
+    venus.b00 venus.b01 venus.b02 venus.b03 venus.b04 venus.mdt
+
+VENUS_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(VENUS_IMAGES)))
+$(VENUS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Venus firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(VENUS_SYMLINKS)
+
+WCNSS_IMAGES := \
+    wcnss.b00 wcnss.b01 wcnss.b02 wcnss.b03 wcnss.b04 wcnss.b06 \
+	wcnss.b09 wcnss.b09 wcnss.b10 wcnss.b11 wcnss.b12 wcnss.mdt
+
+WCNSS_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(WCNSS_IMAGES)))
+$(WCNSS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Wcnss firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(WCNSS_SYMLINKS)
+
+WIDEVINE_IMAGES := \
+    widevine.b00 widevine.b01 widevine.b02 widevine.b03 widevine.b04 \
+	widevine.b05 widevine.b06 widevine.mdt
+
+WIDEVINE_SYMLINKS := $(addprefix $(TARGET_OUT_ETC)/firmware/,$(notdir $(WIDEVINE_IMAGES)))
+$(WIDEVINE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
+	@echo "Widevine firmware link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /firmware/image/$(notdir $@) $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(WIDEVINE_SYMLINKS)
 
 RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT)/rfs/msm/adsp/
 $(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
