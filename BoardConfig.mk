@@ -149,7 +149,7 @@ USE_OPENGL_RENDERER := true
 # Filesystem
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_USERIMAGES_USE_EXT4 := true
-#TARGET_USERIMAGES_USE_F2FS := true we can add f2fs when kernel source exist.
+#TARGET_USERIMAGES_USE_F2FS := true
 
 #FM
 BOARD_HAVE_QCOM_FM := true
@@ -207,8 +207,8 @@ TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
 USE_SENSOR_MULTI_HAL := true
 
 # SELinux
-include device/qcom/sepolicy/sepolicy.mk
-BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+#include device/qcom/sepolicy/sepolicy.mk
+#BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
 
 # Wi-Fi
 BOARD_HAS_QCOM_WLAN := true
