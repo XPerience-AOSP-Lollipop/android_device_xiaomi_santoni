@@ -190,9 +190,9 @@ PRODUCT_PACKAGES += \
     FMRadio \
     libfmjni
 
-# Fs_config
-PRODUCT_PACKAGES += \
-    fs_config_files
+#FS
+TARGET_FS_CONFIG_GEN += \
+    device/xiaomi/santoni/configs.fs
 
 # GPS
 PRODUCT_PACKAGES += \
