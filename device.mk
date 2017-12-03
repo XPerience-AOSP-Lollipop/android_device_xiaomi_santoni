@@ -129,6 +129,11 @@ PRODUCT_PACKAGES += \
     liboverlay \
     libtinyxml
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
+    libbt-vendor
+
 # Ebtables
 PRODUCT_PACKAGES += \
     ebtables \
