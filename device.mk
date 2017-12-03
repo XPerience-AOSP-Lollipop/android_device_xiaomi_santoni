@@ -272,8 +272,7 @@ PRODUCT_COPY_FILES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
-    libqsap_sdk \
-    libQWiFiSoftApCfg \
+    android.hardware.wifi@1.0-service \
     wificond \
     libwpa_client \
     hostapd \
