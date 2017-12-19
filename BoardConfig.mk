@@ -122,15 +122,14 @@ BOARD_USES_QCNE := true
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
-# Dexpreopt
+# Basic Dexpreopt Go mode
 ifeq ($(HOST_OS),linux)
   ifneq ($(TARGET_BUILD_VARIANT),eng)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
+    ifeq ($(WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY),)
+       WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
     endif
   endif
 endif
-WITH_DEXPREOPT_BOOT_IMG_ONLY ?= true
 
 #Display
 BOARD_USES_ADRENO                := true
