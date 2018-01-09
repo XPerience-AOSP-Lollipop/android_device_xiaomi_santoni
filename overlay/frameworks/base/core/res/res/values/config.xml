@@ -134,7 +134,7 @@
     -->
     <integer name="config_longPressOnHomeBehavior">2</integer>
 
-    <!-- Control the behavior when the user long presses the app switch button.
+    <!-- Control the behavior when the user long presses the menu button.
             0 - Nothing
             1 - Menu key
             2 - Recent apps view in SystemUI
@@ -142,12 +142,13 @@
             4 - Voice Search
             5 - In-app Search
             6 - Launch camera
-            7 - Turn screen off
+            7 - Sleep
             8 - Last app
+            9 - Toggle split screen
          This needs to match the constants in
-         services/core/java/com/android/server/policy/PhoneWindowManager.java
+         policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
-    <integer name="config_longPressOnAppSwitchBehavior">3</integer>
+    <integer name="config_longPressOnMenuBehavior">2</integer>
 
     <!-- Wifi driver supports batched scan -->
     <bool translatable="false" name="config_wifi_batched_scan_supported">true</bool>
