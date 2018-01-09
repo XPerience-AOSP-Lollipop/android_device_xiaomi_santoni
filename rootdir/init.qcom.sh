@@ -357,7 +357,6 @@ case "$buildvariant" in
         ;;
 esac
 
-
 # Set Memory paremeters.
 #
 # Set per_process_reclaim tuning parameters
@@ -375,9 +374,9 @@ esac
 
 # Read adj series and set adj threshold for PPR and ALMK.
 # This is required since adj values change from framework to framework.
-adj_series=`cat /sys/module/lowmemorykiller/parameters/adj`
-adj_1="${adj_series#*,}"
-set_almk_ppr_adj="${adj_1%%,*}"
+#adj_series=`cat /sys/module/lowmemorykiller/parameters/adj`
+#adj_1="${adj_series#*,}"
+#set_almk_ppr_adj="${adj_1%%,*}"
 
 # PPR and ALMK should not act on HOME adj and below.
 # Normalized ADJ for HOME is 6. Hence multiply by 6
